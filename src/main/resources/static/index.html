@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- <script type="text/javascript" src="/emp-curdapp/resources/static/jquery-3.3.1.min.jspx"></script>  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./js/angular.min.js"></script>
+<script src="./js/app.js"></script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title></title>
+  </head>
+  <script type="text/javascript">
+  
+ 
+  </script>
+  <body>
+  
+  <div ng-app="employeeCrudApp" ng-controller="myCtrl">
+    <table>
+    	<tr><th>id</th>
+    	<th>name</th>
+    	<th>email</th>
+    	<th>sal</th>
+    	<th>dept</th>
+    	</tr>
+    	
+        <tr ng-repeat="x in employees">
+        	<td>{{x.id}}</td>
+        	<td>{{x.name}}</td>
+        	<td>{{x.email}}</td>
+        	<td>{{x.sal}}</td>
+        	<td>{{x.dept}}</td>
+        	<td><button ng-click="editEmp(x);">Edit</button></td>
+        
+        </tr>
+    </table>
+    
+    <form >
+    	<input ng-model="emp.id"/>
+    	<input ng-model="emp.name"/>
+    	<input ng-model="emp.sal"/>
+    	<input ng-model="emp.dept"/>
+    	<input ng-model="emp.email"/>
+    	<button ng-click="persistEmp(emp);">{{action}}</button>
+    </form>
+</div>
+  
+  
+  
+  
+  <!-- 
+  	<input type="button" id="addEmpId" name="Add Employee Details"  onclick="addEmployeeDetails();">	  
+	<input type="button" id="deleteEmpId" name="Delete Employee Details"  onclick="deleteEmployeeDetails();">	  
+  
+  <div id="employeeListDivId"></div>
+  <div id="upadteEmpDetailsDivId"></div>
+   -->
+    
+  </body>
+</html>
